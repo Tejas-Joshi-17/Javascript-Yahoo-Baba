@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event - I</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Form Event - I</h1>
+
+    <form action="">
+        <label for="">Name</label>
+            <input type="text" name="" id="" onfocus="Focus_Function(this)" onblur="Blur_Function(this)" oninput="Input_Function(this)">
+        <br><br>
+        <label for="">Class</label>
+            <input type="text" name="" id="" onfocus="Focus_Function(this)" onblur="Blur_Function(this)">
+
+        <div id="Input_Function_Testing" style="font-size: 20px; margin-top: 20px; border: 1px solid black;"></div>
+    </form>
+
+    <script>
+        function Focus_Function(Target){
+            Target.style.backgroundColor = "lime"
+        }
+        function Blur_Function(Target){
+            Target.style.backgroundColor = ""
+        }
+        function Input_Function(Target){
+            let x = Target.value
+            document.getElementById("Input_Function_Testing").innerHTML = x
+        }
+    </script>
+</body>
+</html>
